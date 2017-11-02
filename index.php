@@ -1,6 +1,6 @@
 <?php 
-//require('inc/db.php');
-//require('inc/settings.php');
+require('inc/database.php');
+require('inc/settings.php');
 
 ?><!--
 _________                        __             .___
@@ -27,7 +27,7 @@ ____   ____    .__   __
 
 <html>
 <head>
-  <title>Exodus &bull; PS4 Torrent List</title>
+  <title><?php echo $sitename ?> &bull; PS4 Torrent List</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript">
 </script><!-- Latest compiled and minified CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Optional theme -->
@@ -49,10 +49,10 @@ ____   ____    .__   __
 
   <div class="container">
     <div class="content">
-      <div class="logo"><img src="https://www.psxhax.com/styles/default/xenforo/logo.png"></div>
+      <div class="logo"><img src="<?php echo $logo ?>"></div>
 
       <div class="title">
-        Exodus Torrents
+        <?php echo $sitename ?>
       </div>
 
       <div class="moto"></div><!-- Trigger the modal with a button -->
@@ -61,7 +61,7 @@ ____   ____    .__   __
         <div class="row">
           <h2>PS4 Torrent Search</h2>
 
-          <form method="POST" action="search.php">
+          <form method="POST" action="">
                 <div id="custom-search-input">
                     <div class="input-group col-md-12">
                         <input type="text" class="form-control input-lg" name="search" placeholder="Search" />
@@ -82,7 +82,7 @@ ____   ____    .__   __
     <script type="text/javascript">
               document.write(new Date().getFullYear());
     </script>&copy; <a href="https://www.psxhax.com/members/wultra.560/">Vultra</a><br>
-    Exodus is not associated in any way with <a href="https://playstation.com">Playstation</a> and <a href="https://psxhax.com/">PSXHAX</a>.
+    <?php echo $sitename ?> V<?php echo $siteversion ?> is not associated in any way with <a href="https://playstation.com">Playstation</a> and <a href="https://psxhax.com/">PSXHAX</a>.
   </div><script type="text/javascript">
               $(document).ready(function(){
                       $(".logo").fadeIn(2000);
